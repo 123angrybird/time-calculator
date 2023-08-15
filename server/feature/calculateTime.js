@@ -1,6 +1,5 @@
 const Time = require("../class/time.js")
 
-
 exports.calculateTime = (req, res) => {
     let curHour = Number(req.query.hour);
     let curMinute = Number(req.query.minute);

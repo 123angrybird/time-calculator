@@ -1,8 +1,10 @@
 
 const express = require('express');
 const routes = express.Router();
-const feature = require("../feature/calculateTime");
+const calculateTime = require("../feature/calculateTime");
+const home = require("../feature/featuresList");
 
-routes.get("/calculate_time/", feature.calculateTime);
+routes.get("/", home.featureList)
+routes.get("/calculate_time/", calculateTime.calculateTime);
 
 module.exports = routes;
