@@ -8,4 +8,4 @@ const port = process.env.PORT;
 app = express();
 
 app.use(routes);
-
+app.listen(port, ()=> console.log(`Server is listening at ${port}`));
