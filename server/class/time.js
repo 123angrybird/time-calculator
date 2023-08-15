@@ -1,7 +1,12 @@
 class Time {
+    // the time will be save as 24 hour clock type
     constructor(hour, minute) {
         this.hour = hour;
         this.minute = minute;
+    }
+
+    static toMinute(hour, minute) {
+        return hour * 60 + minute;
     }
 
     setTime(hour = 0, minute = 0) {
@@ -56,6 +61,11 @@ class Time {
 
         return this;
     }
+
+    toMinute() {
+        return this.hour*60 + this.minute;
+    }
+
 }
 
 module.exports = Time;
